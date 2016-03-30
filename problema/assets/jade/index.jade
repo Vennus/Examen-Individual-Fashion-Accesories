@@ -1,0 +1,306 @@
+doctype
+html
+	head
+		title Fashion-Accesories
+		link(href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="assets/font-awesome/css/font-awesome.css")
+		link(rel="stylesheet" href="assets/css/bootstrap.css")
+		link(rel="stylesheet" href="assets/css/main.css")
+	body
+
+		mixin lista1
+			li.dropdown
+				a(class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"  aria-haspopup="true" aria-expanded="false")	Lenguaje 
+					span.caret
+				ul.dropdown-menu
+						li(href="#") Ingles
+						li(href="#") Español
+						li(href="#") Italiano
+						li(href="#") Portuguez
+		mixin lista2
+			li.dropdown
+				a(class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"  aria-haspopup="true" aria-expanded="false")	$ Currecy 
+					span.caret
+				ul.dropdown-menu
+						li(href="#") Ingles
+						li(href="#") Español
+						li(href="#") Italiano
+						li(href="#") Portuguez	
+		mixin lista3
+			li.dropdown
+				a.fa.fa-user
+				a(class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"  aria-haspopup="true" aria-expanded="false") My Account 
+					span.caret
+				ul.dropdown-menu
+						li(href="#") Ingles
+						li(href="#") Español
+						li(href="#") Italiano
+						li(href="#") Portuguez	
+		mixin star (black)
+			ul 
+				li 
+					i.fa.fa-star
+				li
+					i.fa.fa-star
+				li
+					i.fa.fa-star
+				li
+					i.fa.fa-star-o
+				li
+					i.fa.fa-star-o
+		// NAVEGADOR DE SELECCION DE IDIOMAS Y USUARIO//
+		.idioma-nav
+			.container
+				.col-md-7
+					p Default Welcome Msg!
+				.col-md-5
+					.nav-idiomas.bs-example(data-example-id="nav-tabs-with-dropdown")
+						ul.nav.nav-tabs
+							+lista1
+							+lista2
+							+lista3
+		header
+			.container
+				.col-md-4
+					i.fa.fa-clock-o
+					h4 OPENING TIME
+					span 9:00 AM - 10:00 PM
+				.col-md-4
+					a(href="index.html")
+						img(src="assets/images/logo.png")
+				.col-md-4
+					form(action="#")
+						input(name="name" type="text" class="search" palceholder="search")
+						i.fa.fa-search
+		nav
+			.nav.navbar.navbar-default
+				.container
+					.navbar-header
+						button.navbar-toogle.collapse(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+					.collapse.navbar-collapse#bs-example-navbar-collapse-1
+						ul.nav.navbar-nav.navbar-left
+							li 
+								a(href="index.html") HOME
+							li 
+								a(href="contact.html") CONTACT US
+							li 
+								a.fa.fa-shopping-cart 
+									My Cart
+										small 2 item(s) - 524400
+		section.bg-carouse
+			.container
+				#myCarousel.carousel.slider(data-interval="3000" data-ride="carousel")
+					ol.carousel-indicators
+						li(data-target="#carousel" data-slide-to="0" class="active")
+						li(data-target="#carousel" data-slide-to="1")
+						li(data-target="#carousel" data-slide-to="2")
+					.first.carousel-inner
+						.item.active.bg-1
+							.carousel-caption
+								h1 Hola mundo!
+								p hola a todos..ggg
+						.item.bg-2
+							.carousel-caption
+								h1 hola a Todos!!
+								p como estan!!
+					a.left.carousel-control(href="#carousel" data-slider="prev")
+						span.icon-prev(aria-hidden="true")
+					a.right.carousel-control(href="#carousel-example-generic" data-slider="prev")
+						span.icon-prev(aria-hidden="true")
+		section.banner.pt-5
+			.container
+				.row
+					.col-md-5
+						img(src="assets/images/banner1.jpg")
+					.col-md-7
+						img(src="assets/images/banner2.jpg")
+		section.product
+			.container
+				.row
+					ul
+						li LATEST
+						li BESTSELLER
+						li SALE
+				.row
+					.col-md-3
+						.box-product.text-center
+							img(src="assets/images/a1.jpg")
+							p Deliver Wide
+							+star
+							p $218.00
+					.col-md-3
+						.box-product.text-center
+							img(src="assets/images/b1.jpg")
+							p Deliver Wide
+							+star
+							small $242.00
+							small $218.00
+					.col-md-3
+						.box-product.text-center
+							img(src="assets/images/c1.jpg")
+							p Deliver Wide
+							+star
+							small $240.00 
+							small $218.00
+					.col-md-3
+						.box-product.text-center
+							img(src="assets/images/d1.jpg")
+							p Deliver Wide
+							+star
+							p $218.00
+		.section.bg-logo
+			.container
+				.row
+					.col-md-2
+						img(src="assets/images/client1.jpg")
+					.col-md-2
+						img(src="assets/images/client2.jpg")
+					.col-md-2
+						img(src="assets/images/client3.jpg")
+					.col-md-2
+						img(src="assets/images/client4.jpg")
+					.col-md-2
+						img(src="assets/images/client5.jpg")
+					.col-md-2
+						img(src="assets/images/client6.jpg")
+		section
+			.container
+				.row
+					ul
+						li CLOTHING
+						li EQUIPMENTS
+						li JEWELLWRY
+					.col-md-4
+						.box-img
+							img(src="assets/images/a1.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							p $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+					.col-md-4
+						.box-img
+							img(src="assets/images/d2.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							p $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+					.col-md-4
+						.box-img
+							img(src="assets/images/g2.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							p $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+				.row
+					.col-md-4
+						.box-img
+							img(src="assets/images/c2.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							p $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+					.col-md-4
+						.box-img
+							img(src="assets/images/c2.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							small $242.00
+							small $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+					.col-md-4
+						.box-img
+							img(src="assets/images/e2.jpg")
+						.box-text
+							p Deliver Wide
+							+star
+							small $242.00
+							small $218.00
+							button
+								a.fa.fa-shopping-cart Add to Cart
+		section
+			.container
+				.row
+					h4 BLOG
+				.row
+					.col-md-3
+						img(src="assets/images/blog3.jpg")
+						h3 THE SAMPLE HEADING TITLE
+						small 23/11/2015
+						p Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do...
+						a(href="#") Read more...
+					.col-md-3
+						img(src="assets/images/blog1.jpg")
+						h3 THE SAMPLE HEADING TITLE
+						small 23/11/2015
+						p Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do...
+						a(href="#") Read more...
+					.col-md-3
+						img(src="assets/images/blog2.jpg")
+						h3 THE SAMPLE HEADING TITLE
+						small 23/11/2015
+						p Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do...
+						a(href="#") Read more...
+					.col-md-3
+						img(src="assets/images/blog3.jpg")
+						h3 THE SAMPLE HEADING TITLE
+						small 23/11/2015
+						p Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do...
+						a(href="#") Read more...
+		section
+			.container
+				.row
+					.col-md-4
+						.box-info
+							i.fa.fa-phone
+							h4 ORDER ONLINE NOW
+							P Call Us: (0123) 456789
+					.col-md-4
+						.box-info
+							i.fa.fa-plane
+							h4 FREE WORLDWIDE SHIPPING
+							P On Order Over $100
+					.col-md-4
+						.box-info
+							i.fa.fa-money
+							h4 30 DAYS MONEY BACK 100%
+							P Satisfaction Guarantee
+		footer
+			.container
+				.row
+					.col-md-3
+						h4 ACCESORIES
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsum vel earum recusandae consequuntur, est molestias officiis distinctio necessitatibus, fugit quasi consectetur dicta. Eaque, esse labore quis deleniti placeat illum.
+						.icon-social
+							ul
+								li
+									i.fa.fa-facebook
+								li
+									i.fa.fa-twitter
+								li
+									i.fa.fa-wifi
+								li
+									i.fa.fa-skype
+								li
+									i.fa.fa-soccer-ball-o
+					.col-md-2
+						h4 MY ACCOUNT
+						i.fa.fa-angle-double-right
+							p  My Account
+
+script(src="js/jquery.js")
+script(src="js/bootstrap.min.js")
+script(src="js/cbpAnimated.js")
